@@ -1,7 +1,8 @@
-body{
+ body{
   margin: 0px;
   padding: 0px;
   font-size: 25px;
+  width:auto;
   text-align: center;
   font-family: Georgia,verdana;
 }
@@ -10,7 +11,7 @@ header{
     padding: 0px;
     margin: 0px;
     background-color:rgb(160,73,148) ;
-    width:auto;
+    width: auto;
     height: 80px;
     color: rgb(37, 220, 5);
 }
@@ -54,16 +55,19 @@ li:hover #cat{
 
 .close{
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 130px;
   color: #000;
-  font-size: 35px;
+  font-size: 50px;
   /* font-weight: bold; */
   color: red;
 }
 
 .close:hover,
 .close:focus {
+    background-color: #000;
+    width: 55px;
+    border-radius: 50%;
     font-weight: bolder;
     cursor: pointer;
 }
@@ -87,7 +91,6 @@ li:hover #cat{
 .modal {
     margin-left: auto;
     margin-right: auto;
-
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */ */
     z-index: 1; /* Sit on top */
@@ -100,6 +103,8 @@ li:hover #cat{
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 
+    /* display: flex; */
+
 }
 
 
@@ -107,7 +112,6 @@ li:hover #cat{
 .innerRow{
   position: relative;
   left: 150px;
-
   margin: 5px;
   width: 700px;
   height: 125px;
@@ -117,11 +121,16 @@ li:hover #cat{
 
 .innerCell{
   margin: 5px;
-
-  /* border: 10px; */
+  border: 10px;
   width: 227px;
   height: 115px;
-  background-color: orange;
+  background-color: #18CCAF;
+  line-height: 480%;
+}
+
+.innerCell:hover{
+  background-color: #29AF16;
+  transition: 0.8s;
 }
 
 .animate {
@@ -143,7 +152,9 @@ li:hover #cat{
 .banner{
     height:350px;
     background-color:#000;
-    max-width: 1000px;
+    max-width: 218vh;
+
+
     position: relative;
     margin: auto;
 
@@ -166,6 +177,12 @@ li:hover #cat{
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+}
+
+.prev{
+  padding-right: 27px;
+  position: absolute;
+  left: 1%;
 }
 
 /* Position the "next button" to the right */
@@ -233,16 +250,20 @@ li:hover #cat{
   to {opacity: 1}
 }
 
-
+.title{
+  display: inline-block;
+  margin-left: 5px;
+  float: left;
+}
 
 
 .row{
   margin: 5px;
-  width: auto;
+  width: 100%;
   height: 200px;
   /* display: grid; */
   display: flex;
-  background-color: orange;
+  background-color: #EAF8E8;
 }
 
 .cell{
@@ -250,14 +271,26 @@ li:hover #cat{
   width: 200px;
   height:auto;
   background-color: cyan;
+  /* display: flex; */
+}
+
+.Pname{
+  font-size: 22px;
+  margin-left: 5px;;
+  float: left;
+  line-height: 1500%;
 
 }
 
+.price{
+  margin-right: 5px;
+  float: right;
+}
 
 footer{
   height: 60px;
   background-color: #9ea2a8;
-  width: 1000px;;
+  width: 100%;
 }
 
 
@@ -282,4 +315,55 @@ footer{
 
 .fa-twitter{
   background:#55ACEE;
+}
+
+/* Making Webpage Mobile Friendly for screen less than 550px */
+@media only screen and (max-width: 550px) {
+  #menu{
+    flex-direction: column;
+
+  }
+
+  .innerRow{
+    margin: 2px;
+    position: sticky;
+    width:auto;
+    height: 150px;
+    overflow: inherit;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .innerCell{
+    margin-top: 2px;
+    width: auto;
+    height: 150px;
+    background-color: #18CCAF;
+    display: flex;
+    line-height: 160%;
+    flex-direction: column;
+  }
+  .close{
+    font-size: 50px;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+
+  }
+  .row{
+    width: auto;
+    flex-direction: column;
+    height: auto;
+  }
+  .cell{
+    width: auto;
+    height: 170px;;
+
+  }
+  .Pname{
+    /* position: relative;
+    bottom: -140px; */
+    line-height: 1300%;
+  }
+
 }
