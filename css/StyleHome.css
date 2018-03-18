@@ -2,9 +2,11 @@
   margin: 0px;
   padding: 0px;
   font-size: 25px;
+  height: inherit;
   width:auto;
   text-align: center;
   font-family: Georgia,verdana;
+
 }
 
 header{
@@ -152,7 +154,7 @@ li:hover #cat{
 .banner{
     height:350px;
     background-color:#000;
-    max-width: 218vh;
+    /* max-width: 218vh; */
 
 
     position: relative;
@@ -258,8 +260,8 @@ li:hover #cat{
 
 
 .row{
-  margin: 5px;
-  width: 100%;
+  margin: 5px;;
+  width: auto;
   height: 200px;
   /* display: grid; */
   display: flex;
@@ -271,6 +273,7 @@ li:hover #cat{
   width: 200px;
   height:auto;
   background-color: cyan;
+  flex-grow: 1;
   /* display: flex; */
 }
 
@@ -288,9 +291,11 @@ li:hover #cat{
 }
 
 footer{
-  height: 60px;
+
+  height: auto;
   background-color: #9ea2a8;
   width: 100%;
+
 }
 
 
@@ -316,6 +321,7 @@ footer{
 .fa-twitter{
   background:#55ACEE;
 }
+
 
 /* Making Webpage Mobile Friendly for screen less than 550px */
 @media only screen and (max-width: 550px) {
