@@ -324,7 +324,7 @@ footer{
 
 
 /* Making Webpage Mobile Friendly for screen less than 550px */
-@media only screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   #menu{
     flex-direction: column;
 
